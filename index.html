@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Member User ID Registration</title>
+
+    <!-- CONNECT CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP MENU -->
+    <nav class="top-menu">
+        <span>SSS.gov.ph</span>
+        <span>My.SSS</span>
+        <span>Corporate Portal</span>
+        <span>Membership</span>
+        <span>Benefits</span>
+        <span>Loans</span>
+        <span>Publications</span>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <h2>Online Member User ID Registration</h2>
+
+        <p class="required">*Required Field</p>
+
+        <p>
+            Please supply the following information as reported to the
+            Social Security System
+        </p>
+
+        <form onsubmit="return validateForm()">
+
+            <!-- CRN / SS NUMBER -->
+            <div class="form-row">
+                <label for="ssNumber">
+                    * CRN / SS Number:
+                </label>
+
+                <input type="text" id="ssNumber" name="ssNumber" required>
+            </div>
+
+            <p class="warning">
+                If your email address is other than yahoo.com, kindly inform
+                your network administrator not to block mail from sss.gov.ph.
+            </p>
+
+            <!-- EMAIL -->
+            <div class="form-row">
+                <label for="email">
+                    * Email Address:
+                </label>
+
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- CONFIRM EMAIL -->
+            <div class="form-row">
+                <label for="confirmEmail">
+                    * Confirm Email Address:
+                </label>
+
+                <input type="email" id="confirmEmail" name="confirmEmail" required>
+            </div>
+
+            <p class="warning">
+                Length must be 8-20 characters. First character must be
+                alphabetic. No special characters except underscore.
+                (Ex. Juan_Cruz1234)
+            </p>
+
+            <!-- USER ID -->
+            <div class="form-row">
+                <label for="userID">
+                    * Preferred User ID:
+                </label>
+
+                <input type="text" id="userID" name="userID" required>
+            </div>
+
+            <!-- CONFIRM USER ID -->
+            <div class="form-row">
+                <label for="confirmUserID">
+                    * Confirm Preferred User ID:
+                </label>
+
+                <input type="text" id="confirmUserID" name="confirmUserID" required>
+            </div>
+
+            <p class="warning">
+                The following characters are not allowed:
+                # % ( ) \ - " &lt; &gt; /
+            </p>
+
+            <!-- SURNAME -->
+            <div class="form-row">
+                <label for="surname">
+                    * Surname/Last Name:
+                </label>
+
+                <input type="text" id="surname" name="surname" required>
+            </div>
+
+            <!-- GIVEN NAME -->
+            <div class="form-row">
+                <label for="givenName">
+                    * Given Name:
+                </label>
+
+                <input type="text" id="givenName" name="givenName" required>
+            </div>
+
+            <!-- MIDDLE NAME -->
+            <div class="form-row">
+                <label for="middleName">
+                    Middle Name:
+                </label>
+
+                <input type="text" id="middleName" name="middleName">
+            </div>
+
+            <!-- DATE OF BIRTH -->
+            <div class="form-row">
+                <label for="birthDate">
+                    * Date of Birth:
+                </label>
+
+                <input type="date" id="birthDate" name="birthDate" required>
+            </div>
+
+            <!-- ADDRESS -->
+            <h3>* Mailing Address (Philippine Address)</h3>
+
+            <div class="form-row">
+                <label for="building">
+                    Room / Floor / Unit No. & Building Name:
+                </label>
+
+                <input type="text" id="building" name="building">
+            </div>
+
+            <div class="form-row">
+                <label for="house">
+                    House / Lot & Block No.:
+                </label>
+
+                <input type="text" id="house" name="house">
+            </div>
+
+            <div class="form-row">
+                <label for="street">
+                    Street:
+                </label>
+
+                <input type="text" id="street" name="street">
+            </div>
+
+            <div class="form-row">
+                <label for="subdivision">
+                    Subdivision:
+                </label>
+
+                <input type="text" id="subdivision" name="subdivision">
+            </div>
+
+            <!-- LOCATION -->
+            <div class="location">
+
+                <label>
+                    <input type="checkbox" name="location" value="Metro Manila">
+                    Metro Manila
+                </label>
+
+                <label>
+                    <input type="checkbox" name="location" value="Province">
+                    Province
+                </label>
+
+            </div>
+
+            <br>
+
+            <!-- BUTTONS -->
+            <button type="submit">Submit</button>
+
+            <button type="reset">Reset</button>
+
+        </form>
+
+    </div>
+
+    <!-- CONNECT JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
